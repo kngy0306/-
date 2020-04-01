@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- @author Haroen <hello@haroen.me> -->
+<html lang="en">
+
+<head>
+  <title>ぺろさいと</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <style>
+    html,
+    body {
+      font-family: -apple-system, sans-serif;
+      margin: 0;
+      height: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://unpkg.com/floating.js"></script>
+  <script>
+    let num = 0;
+
+    document.onclick = () => {
+      if (num % 10 === 0) {
+        floating({
+          content: '<img src="./kana.png">',
+          number: 1,
+          direction: 'reverse',
+          repeat: 1,
+          size: [1,10]
+        });
+      } else if (num % 15 === 0) {
+        floating({
+          content: '<img src="./miku.png">',
+          number: 1,
+          direction: 'reverse',
+          repeat: 1,
+          size: [1,10]
+        });
+      } else if (num % 25 === 0) {
+        floating({
+          content: '<img src="./mirei.png">',
+          number: 1,
+          direction: 'reverse',
+          repeat: 1,
+          size: [1,10]
+        });
+      } else {
+        floating({
+          content: 'ぺろぺろ',
+          number: 1,
+          direction: 'reverse',
+          repeat: 1,
+          size: [1,10]
+        });
+      }
+      num++;
+    }
+  </script>
+</body>
+
+</html>
